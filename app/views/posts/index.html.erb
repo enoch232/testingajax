@@ -1,0 +1,13 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<%= form_for :post , url: new_post_path , method: :get do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
+<% end %>
+
+<% @posts.each do |post| %>
+<%= post.name %>
+<br>
+<% end %>
